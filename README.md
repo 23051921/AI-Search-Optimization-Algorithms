@@ -16,6 +16,7 @@ AI-Search-Optimization-Algorithms/
 ├── 8_puzzle_interactive_gui.py          # A* search 8-puzzle solver with live Tkinter animation
 ├── puzzle_solver_heuristics_gui.py      # Heuristic comparison (Manhattan vs Misplaced) GUI
 ├── multi_goal_pathfinder_gui.py         # Multi-target grid pathfinder with obstacle drawing GUI
+├── adversarial_tictactoe_ai.py          # Adversarial Minimax game-playing AI with 3x3, 4x4, 5x5 Tkinter GUI
 ├── graph_search_ucs_bfs_dfs.py          # Uniform Cost Search, BFS, and DFS with NetworkX rendering
 ├── greedy_vs_bfs_pathfinding.py         # Greedy Best-First vs BFS on obstacle grids
 ├── best_first_search_grid.py            # Priority-queue heuristic grid navigation
@@ -51,6 +52,14 @@ AI-Search-Optimization-Algorithms/
 * **Heuristic:** Calculates number of attacking queen pairs (row, diagonal conflicts).
 * **Local Search:** Steepest-ascent hill climbing with sideways steps and automated random restarts to escape local optima plateaus.
 
+### 5. Adversarial Game Search (`adversarial_tictactoe_ai.py`)
+* **Game Tree Evaluation:** Implements adversarial heuristic search for dynamic grid sizes ($3 \times 3$, $4 \times 4$, and $5 \times 5$).
+* **Difficulty Modes:**
+  - **Easy:** Uniform random legal move exploration.
+  - **Medium (Defensive):** Prioritizes opponent winning threat blocks.
+  - **Hard (Aggressive):** Immediate win execution followed by strategic centroid and defensive intercept selection.
+* **Tkinter Interface:** Real-time visual board with dynamic menu toggles for grid dimensions and difficulty modes.
+
 ---
 
 ## ⏱️ Theoretical Complexity Analysis
@@ -84,6 +93,9 @@ python 8_puzzle_interactive_gui.py
 
 # Launch the Multi-Goal Grid Pathfinder
 python multi_goal_pathfinder_gui.py
+
+# Launch the Adversarial Tic-Tac-Toe AI Studio
+python adversarial_tictactoe_ai.py
 ```
 
 ### 3. Run Benchmark Solvers
